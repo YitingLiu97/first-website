@@ -1,0 +1,20 @@
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* place fortune cookies in random places - depending on the mouse position */
+
+
+/* or the item rotates according to the mouse direction */
+
+/* box of generating the fortune */
+
+
+/* animation of the white paper */
+
+/* generate sound as well */

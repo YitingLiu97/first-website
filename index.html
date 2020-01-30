@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>My First Website</h1>
-    <p>Welcome to my page. I hope you have a great day!</p>
-    <p>Are you having a great day?</p>
-    <p>Just testing.</p>
+    <!-- "Normalize attempts to add consistency to the browser styling. I prefer Normalize, because you don't have to go back and re-style every element." -->
+    <!-- <link rel="stylesheet" href="css/normalize.min.css" /> -->
 
-    <button id="changeBackground">Change Background Color</button>
+
+    <title>Fortune Cookie Quote</title>
+</head>
+
+<body>
+    <h1>Fortune Cookies</h1>
+    <div class=container>
+        <button id="getFC" onclick="myFunction()">Get me fortune cookies!</button>
+
+        <!-- <button onclick="myFunction()">Write a quote.</button> -->
+
+        <form action="#">
+            Write a quote: <input type="text" name="quote" maxlength="100"><br>
+        </form>
+    </div>
+
+    <script>
+
+        let quoteArr = ["a", "b", "b", "b", "b"];
+
+        let oneQuote = " ";
+
+        function myFunction() {
+            for (let i = 0; i < quoteArr.length; i++) {
+                oneQuote = quoteArr[i];
+            }
+            document.getElementById("getFC").textContent = oneQuote;
+        }
+
+    </script>
 
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
