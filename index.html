@@ -11,35 +11,37 @@
 
     <title>Fortune Cookie Quote</title>
 </head>
+<!-- Steps
+when button is clicked once, randomly generalize the content of quote.
+generate play again button on the same location.
+when type in "write a quote", submit to a database.
+a confirmation that we have received the quote. 
+generate submit again in the "submit" place.  -->
+
 
 <body>
     <h1>Fortune Cookies</h1>
     <div class=container>
-        <button id="getFC" onclick="myFunction()">Get me fortune cookies!</button>
+        <button id="getFC" onclick="GetValue()">Get me fortune cookies!</button>
 
-        <!-- <button onclick="myFunction()">Write a quote.</button> -->
 
         <form action="#">
-            Write a quote: <input type="text" name="quote" maxlength="100"><br>
+            <input type="text" name="quote" maxlength="100" value="Write a quote"><br>
+            <input type="submit" value="Submit">
         </form>
     </div>
 
     <script>
 
-        let quoteArr = ["a", "b", "b", "b", "b"];
 
-        let oneQuote = " ";
-
-        function myFunction() {
-            for (let i = 0; i < quoteArr.length; i++) {
-                oneQuote = quoteArr[i];
-            }
-            document.getElementById("getFC").textContent = oneQuote;
-        }
-
+function GetValue()
+{
+    var quoteArr= new Array("12121","1212","12345678");
+    var random = quoteArr[Math.floor(Math.random() * quoteArr.length)];
+    //alert(random);
+    document.getElementById("getFC").textContent=random;
+}
     </script>
-
-    <script src="js/script.js"></script>
 
 </body>
 
