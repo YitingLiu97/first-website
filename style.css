@@ -7,6 +7,29 @@ html {
   box-sizing: inherit;
 }
 
+body{
+background-image: url('assets/fc_background.svg');
+}
+
+animate{
+  animation: rotation 2s infinite linear;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+
 /* place fortune cookies in random places - depending on the mouse position */
 
 
