@@ -21,9 +21,8 @@ generate submit again in the "submit" place.  -->
 
 <body>
     <h1>Fortune Cookies</h1>
-    <div class=container>
+    <div id=container>
         <button id="getFC" onclick="GetValue()">Get me fortune cookies!</button>
-
 
         <form action="#">
             <input type="text" name="quote" maxlength="100" value="Write a quote"><br>
@@ -31,16 +30,23 @@ generate submit again in the "submit" place.  -->
         </form>
     </div>
 
+    <div id="container">
+        <div id="animate">
+            <!-- Reference for rotation: https://stackoverflow.com/questions/16771225/css3-rotate-animation -->
+            <img src="" alt="">
+        </div>
+    </div>
+
     <script>
 
 
-function GetValue()
-{
-    var quoteArr= new Array("12121","1212","12345678");
-    var random = quoteArr[Math.floor(Math.random() * quoteArr.length)];
-    //alert(random);
-    document.getElementById("getFC").textContent=random;
-}
+        // Reference: https://stackoverflow.com/questions/16753876/javascript-button-to-pick-random-item-from-array
+        function GetValue() {
+            var quoteArr = new Array("12121", "1212", "12345678");
+            var random = quoteArr[Math.floor(Math.random() * quoteArr.length)];
+            //alert(random);
+            document.getElementById("getFC").textContent = random;
+                }
     </script>
 
 </body>
