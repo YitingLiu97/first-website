@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- "Normalize attempts to add consistency to the browser styling. I prefer Normalize, because you don't have to go back and re-style every element." -->
-    <!-- <link rel="stylesheet" href="css/normalize.min.css" /> -->
+    <link rel="stylesheet" href="style.css" />
 
 
     <title>Fortune Cookie Quote</title>
@@ -21,24 +21,22 @@ generate submit again in the "submit" place.  -->
 
 <body>
     <h1>Fortune Cookies</h1>
-    <div id=container>
-        <button id="getFC" onclick="GetValue()">Get me fortune cookies!</button>
+    <div id="container">
+        <button class="button" onclick="GetValue()">Get me fortune cookies!</button>
 
         <form action="#">
             <input type="text" name="quote" maxlength="100" value="Write a quote"><br>
-            <input type="submit" value="Submit">
+            <input class="button" type="submit" value="Submit">
         </form>
     </div>
 
     <div id="container">
-        <div id="animate">
             <!-- Reference for rotation: https://stackoverflow.com/questions/16771225/css3-rotate-animation -->
-            <img src="assets/fortunecookie-01.png" alt="fortune cookie image 1">
-            <img src="assets/fortunecookie-02.png" alt="fortune cookie image 2">
-            <img src="assets/fortunecookie-03.png" alt="fortune cookie image 3">
-            <img src="assets/fortunecookie-04.png" alt="fortune cookie image 4">
-            <img src="assets/fortunecookie-05.png" alt="fortune cookie image 5">
-        </div>
+            <img id="fc" id="1" src="assets/fortunecookie-01.png" alt="fortune cookie image 1">
+            <img id="fc" id="2" src="assets/fortunecookie-02.png" alt="fortune cookie image 2">
+            <img id="fc" id="3" src="assets/fortunecookie-03.png" alt="fortune cookie image 3">
+            <img id="fc" id="4" src="assets/fortunecookie-04.png" alt="fortune cookie image 4">
+            <img id="fc" id="5" src="assets/fortunecookie-05.png" alt="fortune cookie image 5">
     </div>
 
     <script>

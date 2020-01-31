@@ -1,33 +1,75 @@
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+box-sizing: inherit;
 }
 
 body{
+text-align: center;
+padding: 100px 0 0 0;
 background-image: url('assets/fc_background.svg');
+font-family: 'Gloria Hallelujah', cursive;
 }
 
-animate{
-  animation: rotation 2s infinite linear;
-  position: relative;
-  width: 20px;
-  height: 20px;
+h1{
+font-size: 100px;
+/* box-sizing: border-box; */
+position: relative;
+color:#f7df9c;
+padding: width/2 height/2;
+}
+
+#fc {
+animation: rotation 2s infinite linear;
+width:6em;
+height:6em;
+opacity:90%;
+}
+
+
+.button {
+background-color:#88040a;
+border-color: #f7df9c;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+
+font-family: 'Vollkorn', serif;
+font-size: 40px;
+/* replace cursor with cookie */
+cursor:pointer;
+}
+
+
+.button:hover{
+
+background-color:#f7df9c;
+color:black;
 
 }
+.button:active{
+
+
+
+}
+
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+from {
+transform: rotate(0deg);
 }
-
+to {
+transform: rotate(359deg);
+}
+}
 
 
 /* place fortune cookies in random places - depending on the mouse position */
