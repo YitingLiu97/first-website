@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- "Normalize attempts to add consistency to the browser styling. I prefer Normalize, because you don't have to go back and re-style every element." -->
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="style.css" />
 
-
-    <title>Fortune Cookie Quote</title>
+<title>Fortune Cookie Quote</title>
 </head>
+
 <!-- Steps
 when button is clicked once, randomly generalize the content of quote.
 generate play again button on the same location.
@@ -18,36 +16,56 @@ when type in "write a quote", submit to a database.
 a confirmation that we have received the quote. 
 generate submit again in the "submit" place.  -->
 
-
 <body>
-    <h1>Fortune Cookies</h1>
-    <div id="container">
-        <button class="button" onclick="GetValue()">Get me fortune cookies!</button>
+<h1>Fortune Cookies</h1>
+<div id="container">
+    <div id="getFC" style="display:none"></div>
+    <input class="button" type="button" value="Get me fortune cookies!" onclick="GetValue()">
 
-        <form action="#">
-            <input type="text" name="quote" maxlength="100" value="Write a quote"><br>
-            <input class="button" type="submit" value="Submit">
-        </form>
+    <form action="#">
+        <div class="textbox">
+        <!-- the size can only adjust the width of the box -->
+        <input type="text" name="quote" maxlength="100" value="Write a quote" size="80px"><br>
     </div>
+        <input class="button" type="submit" value="Submit">
+    </form>
+</div>
 
-    <div id="container">
-            <!-- Reference for rotation: https://stackoverflow.com/questions/16771225/css3-rotate-animation -->
-            <img id="fc" id="1" src="assets/fortunecookie-01.png" alt="fortune cookie image 1">
-            <img id="fc" id="2" src="assets/fortunecookie-02.png" alt="fortune cookie image 2">
-            <img id="fc" id="3" src="assets/fortunecookie-03.png" alt="fortune cookie image 3">
-            <img id="fc" id="4" src="assets/fortunecookie-04.png" alt="fortune cookie image 4">
-            <img id="fc" id="5" src="assets/fortunecookie-05.png" alt="fortune cookie image 5">
-    </div>
 
-    <script>
-        // Reference: https://stackoverflow.com/questions/16753876/javascript-button-to-pick-random-item-from-array
-        function GetValue() {
-            var quoteArr = new Array("12121", "1212", "12345678");
-            var random = quoteArr[Math.floor(Math.random() * quoteArr.length)];
-            //alert(random);
-            document.getElementById("getFC").textContent = random;
-                }
-    </script>
+
+<div id="container">
+        <!-- Reference for rotation: https://stackoverflow.com/questions/16771225/css3-rotate-animation -->
+        <img class="fc" id="1" src="assets/fortunecookie-01.png" alt="fortune cookie image 1">
+        <img class="fc" id="2" src="assets/fortunecookie-02.png" alt="fortune cookie image 2">
+        <img class="fc" id="3" src="assets/fortunecookie-03.png" alt="fortune cookie image 3">
+        <img class="fc" id="4" src="assets/fortunecookie-04.png" alt="fortune cookie image 4">
+        <img class="fc" id="5" src="assets/fortunecookie-05.png" alt="fortune cookie image 5">
+</div>
+
+<script>
+    // Reference: https://stackoverflow.com/questions/16753876/javascript-button-to-pick-random-item-from-array
+
+    function GetValue() {
+        var quoteArr = new Array("Change is inevitable, except for vending machines.", 
+        "About time I got out of that cookie. ", 
+        "Never wear your best pants when you go to fight for freedom.", 
+        "Fortune not found? Abort, Retry, Ignore.",
+        "Only listen to the fortune cookie; disregard all other fortune telling units.",
+        "Flattery will go far tonight.",
+        "He who laughs at himself never runs out of things to laugh at.",
+        "If you look back, you’ll soon be going that way.",
+        "Help! I am being held prisoner in a Chinese factory. ",
+        "A foolish man listens to his heart. A wise man listens to cookies.",
+        "A closed mouth gathers no feet.",
+        "The fortune you seek is in another cookie.",
+        "A cynic is only a frustrated optimist.",
+        "This cookie contains 117 calories.",
+        "If a turtle doesn’t have a shell, is it naked or homeless?");
+        var random = quoteArr[Math.floor(Math.random() * quoteArr.length)];
+        document.getElementById("getFC").style.display = "";
+        document.getElementById("getFC").textContent = random;
+    }
+</script>
 
 </body>
 

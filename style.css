@@ -5,6 +5,7 @@ box-sizing: border-box;
 }
 *, *:before, *:after {
 box-sizing: inherit;
+cursor:url(assets/fortunecookie-cursor.png),auto;
 }
 
 body{
@@ -12,21 +13,34 @@ text-align: center;
 padding: 100px 0 0 0;
 background-image: url('assets/fc_background.svg');
 font-family: 'Gloria Hallelujah', cursive;
+position:relative;
 }
 
 h1{
-font-size: 100px;
-/* box-sizing: border-box; */
+font-size: 80px;
+box-sizing: border-box;
 position: relative;
 color:#f7df9c;
-padding: width/2 height/2;
+/* padding: 20px 30px; */
 }
 
-#fc {
+.fc {
 animation: rotation 2s infinite linear;
 width:6em;
 height:6em;
 opacity:90%;
+}
+
+#getFC{
+
+color:black;
+background-color:#f7df9c;
+font-size: 60px;
+font-family: 'Vollkorn', serif;
+padding: 15px 32px;
+/* position: center;; */
+margin: 10px;
+
 }
 
 
@@ -45,8 +59,21 @@ margin: 4px 2px;
 font-family: 'Vollkorn', serif;
 font-size: 40px;
 /* replace cursor with cookie */
-cursor:pointer;
+
 }
+
+.textarea{
+
+padding:15px 32px;
+width:width/2;
+height:height/2;
+box-sizing: content-box;
+justify-content: center;
+position: absolute;
+
+
+}
+
 
 
 .button:hover{
@@ -55,10 +82,9 @@ background-color:#f7df9c;
 color:black;
 
 }
-.button:active{
+.button.active{
 
-
-
+color:black;
 }
 
 
@@ -78,7 +104,6 @@ transform: rotate(359deg);
 /* or the item rotates according to the mouse direction */
 
 /* box of generating the fortune */
-
 
 /* animation of the white paper */
 
